@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "498577946864",
+    "project_id": "weatherapplication-ea2ec",
+    "storage_bucket": "weatherapplication-ea2ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498577946864:android:3c51426446df0333306a35",
+        "android_client_info": {
+          "package_name": "com.example.weatherapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIRndiz4DdYSu7l19p86FCO5AAOpcvUNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<!-- res/drawable/circular_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color inside the border -->
+    <solid android:color="@color/grey_with_opacity"></solid>
+    <!-- Border color and width -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" /> <!-- Change color to your desired border color -->
+
+    <!-- Corner radius to make the border circular -->
+    <corners android:radius="50dp" /> <!-- Adjust the radius to make it fully circular -->
+</shape>

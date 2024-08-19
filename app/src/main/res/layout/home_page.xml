@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sunny2"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search location"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/searchIcon"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:fontFamily="@font/montserratbold"
+        android:padding="16dp"/>
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_search"
+        android:padding="10dp"/>
+
+    <!-- Replace placeholder with a default image if needed -->
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imageDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="20dp"
+        app:lottie_rawRes="@raw/animationsunny"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+         />
+
+
+    <LinearLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/imageDisplay"
+        android:layout_centerHorizontal="true">
+
+        <!-- ImageView for the location vector -->
+
+
+        <!-- TextView for the city name -->
+        <TextView
+            android:id="@+id/CityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratbold"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <ImageView
+
+            android:id="@+id/locationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/baseline_location_pin_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/temperatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationLayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserratbold"
+        android:textSize="60sp"
+
+        android:textColor="@color/MyPrimaryColor"
+        android:text="--°" />
+
+
+
+
+    <TextView
+        android:id="@+id/Conditiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperatureText"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+
+    android:text="--"
+
+    android:textSize="38sp"
+
+    android:textColor="#000000"
+    android:fontFamily="@font/montserratbold"/>
+
+
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Conditiontext"
+        android:layout_centerHorizontal="true"
+    android:layout_marginEnd="160dp" android:layout_marginTop="10dp"
+    android:text="Date"
+    android:textSize="18sp"
+
+    android:textColor="#000000"
+        android:fontFamily="@font/montserratbold"/>
+
+
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateText"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circular_border"
+        android:padding="16dp">
+
+        <!-- First Row -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingTop="8dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="12dp"
+
+        android:paddingEnd="12dp">
+
+            <!-- Humidity Block -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/HumidityIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/drop_icon" />
+
+                <TextView
+                    android:id="@+id/HumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65%"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/montserratbold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/HumidityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/montserratbold"
+
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:fontFamily="@font/montserrat"
+                >
+
+                <ImageView
+                    android:id="@+id/WindIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wind_icon" />
+
+                <TextView
+                    android:id="@+id/WindValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="15 km/h"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/WindLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wind"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/WeatherIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/day_cloud_wind_icon" />
+
+                <TextView
+                    android:id="@+id/WeatherValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15 km/h"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/WeatherLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Condition"
+                    android:fontFamily="@font/montserratbold"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+            <!-- Additional blocks for Wind, Weather Condition, etc., with their own IDs -->
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+                android:id="@+id/SunriseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sunrise_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/SunriseValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="65%"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserratbold"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/SunriseLabel"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunrise"
+                android:fontFamily="@font/montserratbold"
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+         >
+
+            <ImageView
+                android:id="@+id/SunsetIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sunset_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/SunsetValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="65%"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserratbold"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/SunsetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunset"
+                android:fontFamily="@font/montserratbold"
+                android:textColor="#000000"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+       >
+
+            <ImageView
+                android:id="@+id/AQIIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/face_mask_woman_icon" />
+
+            <TextView
+                android:id="@+id/AQIValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="65%"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserratbold"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/AQILabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserratbold"
+                android:text="AQI"
+                android:textColor="#000000"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+        <!-- Second Row similar structure, with IDs for Sunrise, Sunset, AQI -->
+    </LinearLayout>
+
+
+</RelativeLayout>
